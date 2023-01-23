@@ -1,0 +1,22 @@
+<vector android:height="144dp"
+    android:viewportHeight="144" android:viewportWidth="150"
+    android:width="150dp" xmlns:aapt="http://schemas.android.com/aapt" xmlns:android="http://schemas.android.com/apk/res/android">
+    <path android:pathData="M27,13L123,13A12,12 0,0 1,135 25L135,107A12,12 0,0 1,123 119L27,119A12,12 0,0 1,15 107L15,25A12,12 0,0 1,27 13z">
+        <aapt:attr name="android:fillColor">
+            <gradient android:endX="75" android:endY="119"
+                android:startX="75" android:startY="13" android:type="linear">
+                <item android:color="#FF009FFD" android:offset="0"/>
+                <item android:color="#FF2A2A72" android:offset="1"/>
+            </gradient>
+        </aapt:attr>
+    </path>
+    <path android:fillColor="#fff" android:pathData="M104,92L49,92L49,37A1,1 0,0 0,47 37L47,92L46,92a1,1 0,0 0,0 2L47,94v1a1,1 0,0 0,2 0L49,94L104,94a1,1 0,0 0,0 -2Z"/>
+    <path android:fillColor="#fff" android:pathData="M52,65L54,65a1,1 0,0 0,0 -2L52,63a1,1 0,0 0,0 2Z"/>
+    <path android:fillColor="#fff" android:pathData="M52,61L54,61a1,1 0,0 0,0 -2L52,59a1,1 0,0 0,0 2Z"/>
+    <path android:fillColor="#fff" android:pathData="M52,57L54,57a1,1 0,0 0,0 -2L52,55a1,1 0,0 0,0 2Z"/>
+    <path android:fillColor="#fff" android:pathData="M52,53L54,53a1,1 0,0 0,0 -2L52,51a1,1 0,0 0,0 2Z"/>
+    <path android:fillColor="#fff" android:pathData="M52,49L54,49a1,1 0,0 0,0 -2L52,47a1,1 0,0 0,0 2Z"/>
+    <path android:fillColor="#fff" android:pathData="M52,45L54,45A1,1 0,0 0,54 43L52,43A1,1 0,0 0,52 45Z"/>
+    <path android:fillColor="#fff" android:pathData="M52,41L54,41A1,1 0,0 0,54 39L52,39A1,1 0,0 0,52 41Z"/>
+    <path android:fillColor="#fff" android:pathData="M56.01,84.99a5.99,5.99 0,0 0,4.44 -10.02l3.53,-3.53a5.96,5.96 0,0 0,8.05 0l4.54,4.54a5.99,5.99 0,1 0,9.71 1.16l8.7,-8.7a5.93,5.93 0,1 0,-1.25 -1.58l-8.7,8.7a5.97,5.97 0,0 0,-6.88 -0.84l-4.87,-4.87a6,6 0,1 0,-10.55 0l-3.85,3.85a6,6 0,1 0,-2.86 11.27ZM99,60a4,4 0,1 1,-4 4A4,4 0,0 1,99 60ZM85,80a4,4 0,1 1,-4 -4A4,4 0,0 1,85 80ZM68,63a4,4 0,1 1,-4 4A4,4 0,0 1,68 63ZM56.01,74.99a4,4 0,1 1,-4 4A4,4 0,0 1,56.01 74.99Z"/>
+</vector>

@@ -9,4 +9,17 @@
     <string name="register_now">REGISTER NOW</string>
     <string name="login">LOGIN</string>
     <string name="header_logo">Header Logo</string>
+    <string name="profile_icon">PROFILE ICON</string>
+    <string name="image">IMAGE</string>
+    <string name="silver_chit">Silver Chit</string>
+    <string name="product_catalog">Product Catalog</string>
+    <string name="live_rates">Live Rates</string>
+    <string name="gold_rate">Gold Rate</string>
+    <string name="colon">:</string>
+    <string name="dash">22.33</string>
+    <string name="store_locator">Store Locator</string>
+    <string name="click_here"><![CDATA[Click here >>>]]></string>
+    <string name="home">Home</string>
+    <string name="settings">Settings</string>
+    <string name="carousel">CAROUSEL</string>
 </resources>
