@@ -16,6 +16,8 @@ class LoginFragment : Fragment() {
     private lateinit var binding: FragmentLoginBinding
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View {
         (activity as MainActivity).hideBottomNavigationBar()
+        (activity as MainActivity).hideActionBar()
+
         binding = FragmentLoginBinding.inflate(inflater, container, false)
         binding.btnLogin.setOnClickListener {
             findNavController().navigate(LoginFragmentDirections.actionLoginFragmentToDashboardFragment())

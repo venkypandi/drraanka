@@ -8,6 +8,7 @@ import android.widget.ImageView
 import android.widget.LinearLayout
 import androidx.core.content.ContextCompat
 import androidx.fragment.app.Fragment
+import androidx.navigation.fragment.findNavController
 import androidx.viewpager.widget.ViewPager
 import com.identity.drraanka.MainActivity
 import com.identity.drraanka.R
@@ -25,6 +26,7 @@ class DashboardFragment : Fragment() {
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View {
         (activity as MainActivity).showBottomNavigationBar()
+        (activity as MainActivity).hideActionBar()
         binding = FragmentDashboardBinding.inflate(inflater, container, false)
         imageCarouselAdapter =
             ImageCarouselAdapter(listOf(R.drawable.sample1, R.drawable.sample2, R.drawable.sample3))
@@ -36,6 +38,9 @@ class DashboardFragment : Fragment() {
         binding.ivFirstImage.setImageDrawable(ContextCompat.getDrawable(requireActivity(), R.drawable.sample1))
         binding.ivSecondImage.setImageDrawable(ContextCompat.getDrawable(requireActivity(), R.drawable.sample2))
 
+        binding.ivBtnSilverChit.setOnClickListener {
+            findNavController().navigate(R.id.action_dashboardFragment_to_silverChitFragment)
+        }
         return binding.root
     }
 

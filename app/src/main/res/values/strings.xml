@@ -16,7 +16,7 @@
     <string name="live_rates">Live Rates</string>
     <string name="gold_rate">Gold Rate</string>
     <string name="colon">:</string>
-    <string name="dash">22.33</string>
+    <string name="dash">-</string>
     <string name="store_locator">Store Locator</string>
     <string name="click_here"><![CDATA[Click here >>>]]></string>
     <string name="home">Home</string>
@@ -24,4 +24,11 @@
     <string name="carousel">CAROUSEL</string>
     <string name="silver_rate">Silver Rate</string>
     <string name="location">LOCATION</string>
+    <string name="back">BACK</string>
+    <string name="my_plans">My Plans</string>
+    <string name="my_silver_scheme_s">My Silver Scheme\'s</string>
+    <string name="scheme_date">Scheme Date :</string>
+    <string name="pending">Pending :</string>
+    <string name="selection">SELECTION</string>
+    <string name="add_scheme">ADD_SCHEME</string>
 </resources>

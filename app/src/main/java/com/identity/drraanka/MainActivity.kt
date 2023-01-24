@@ -57,6 +57,16 @@ class MainActivity : AppCompatActivity() {
         binding.btmNavigationDashboard.visibility = View.GONE
     }
 
+    fun setUpActionBar(title: String, backPressedListener: () -> Unit) {
+        binding.tvHeadingText.text = title
+        binding.ivBack.setOnClickListener { backPressedListener() }
+        binding.clActionBar.visibility = View.VISIBLE
+    }
+
+    fun hideActionBar() {
+        binding.clActionBar.visibility = View.GONE
+    }
+
     companion object {
         var hasInternet = false
     }
