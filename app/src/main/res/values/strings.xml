@@ -22,4 +22,6 @@
     <string name="home">Home</string>
     <string name="settings">Settings</string>
     <string name="carousel">CAROUSEL</string>
+    <string name="silver_rate">Silver Rate</string>
+    <string name="location">LOCATION</string>
 </resources>

@@ -18,5 +18,14 @@
         android:id="@+id/dashboardFragment"
         android:name="com.identity.drraanka.ui.dashboard.DashboardFragment"
         android:label="fragment_dashboard"
-        tools:layout="@layout/fragment_dashboard" />
+        tools:layout="@layout/fragment_dashboard" >
+        <action
+            android:id="@+id/action_dashboardFragment_to_silverChitFragment3"
+            app:destination="@id/silverChitFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/silverChitFragment"
+        android:name="com.identity.drraanka.ui.silverchit.SilverChitFragment"
+        android:label="fragment_silver_chit"
+        tools:layout="@layout/fragment_silver_chit" />
 </navigation>

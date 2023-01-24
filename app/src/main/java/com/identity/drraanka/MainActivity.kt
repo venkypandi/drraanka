@@ -2,10 +2,12 @@ package com.identity.drraanka
 
 import android.app.AlertDialog
 import android.content.IntentFilter
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.view.LayoutInflater
+import android.view.View
+import androidx.appcompat.app.AppCompatActivity
 import androidx.core.splashscreen.SplashScreen.Companion.installSplashScreen
+import androidx.navigation.fragment.NavHostFragment
+import androidx.navigation.ui.NavigationUI
 import com.identity.drraanka.databinding.ActivityMainBinding
 import com.identity.drraanka.utils.ConnectivityCheck
 import dagger.hilt.android.AndroidEntryPoint
@@ -23,6 +25,8 @@ class MainActivity : AppCompatActivity() {
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
         supportActionBar?.hide()
+        val navHostFragment = supportFragmentManager.findFragmentById(R.id.nav_host_fragment) as NavHostFragment
+        NavigationUI.setupWithNavController(binding.btmNavigationDashboard, navHostFragment.navController)
     }
 
     override fun onStart() {
@@ -44,6 +48,13 @@ class MainActivity : AppCompatActivity() {
 
     private fun createNoInternetDialog() {
 
+    }
+
+    fun showBottomNavigationBar() {
+        binding.btmNavigationDashboard.visibility = View.VISIBLE
+    }
+    fun hideBottomNavigationBar() {
+        binding.btmNavigationDashboard.visibility = View.GONE
     }
 
     companion object {

@@ -1,17 +1,15 @@
 package com.identity.drraanka.ui.dashboard
 
 import android.os.Bundle
-import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.LinearLayout
 import androidx.core.content.ContextCompat
-import androidx.core.view.setMargins
-import androidx.core.view.size
 import androidx.fragment.app.Fragment
 import androidx.viewpager.widget.ViewPager
+import com.identity.drraanka.MainActivity
 import com.identity.drraanka.R
 import com.identity.drraanka.databinding.FragmentDashboardBinding
 import com.identity.drraanka.ui.adapter.ImageCarouselAdapter
@@ -25,11 +23,8 @@ class DashboardFragment : Fragment() {
     private lateinit var imageCarouselAdapter: ImageCarouselAdapter
     private var dots: ArrayList<ImageView> = ArrayList()
 
-    override fun onCreateView(
-        inflater: LayoutInflater,
-        container: ViewGroup?,
-        savedInstanceState: Bundle?
-    ): View {
+    override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View {
+        (activity as MainActivity).showBottomNavigationBar()
         binding = FragmentDashboardBinding.inflate(inflater, container, false)
         imageCarouselAdapter =
             ImageCarouselAdapter(listOf(R.drawable.sample1, R.drawable.sample2, R.drawable.sample3))
