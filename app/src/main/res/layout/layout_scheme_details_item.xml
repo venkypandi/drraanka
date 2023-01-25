@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <TextView
+        android:id="@+id/tvEmi"
+        android:layout_width="@dimen/_0dp"
+        android:layout_height="wrap_content"
+        android:text="@string/dash"
+        style="@style/text_blue_regular_16"
+        android:layout_marginTop="@dimen/_10dp"
+        android:layout_marginBottom="@dimen/_1dp"
+        android:layout_marginHorizontal="@dimen/_12dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/tvEmiNumber"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/ivPayment"/>
+
+    <TextView
+        android:id="@+id/tvEmiDate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/dash"
+        style="@style/text_blue_regular_12"
+        android:layout_marginTop="@dimen/_1dp"
+        app:layout_constraintTop_toTopOf="@id/tvEmiNumber"
+        app:layout_constraintBottom_toBottomOf="@id/tvEmiNumber"
+        app:layout_constraintStart_toStartOf="@id/tvEmi"
+        app:layout_constraintEnd_toStartOf="@id/tvHyphen"/>
+
+    <TextView
+        android:id="@+id/tvHyphen"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/dash"
+        style="@style/text_blue_regular_12"
+        android:paddingHorizontal="@dimen/_0dp"
+        android:layout_marginTop="@dimen/_1dp"
+        app:layout_constraintTop_toTopOf="@id/tvEmiNumber"
+        app:layout_constraintBottom_toBottomOf="@id/tvEmiNumber"
+        app:layout_constraintStart_toEndOf="@id/tvEmiDate"
+        app:layout_constraintEnd_toStartOf="@id/tvEmiNumber"/>
+
+    <TextView
+        android:id="@+id/tvEmiNumber"
+        android:layout_width="@dimen/_0dp"
+        android:layout_height="wrap_content"
+        android:text="@string/dash"
+        style="@style/text_blue_regular_12"
+        android:layout_marginTop="@dimen/_1dp"
+        android:layout_marginBottom="@dimen/_10dp"
+        app:layout_constraintTop_toBottomOf="@id/tvEmi"
+        app:layout_constraintBottom_toTopOf="@id/divider"
+        app:layout_constraintStart_toEndOf="@id/tvHyphen"
+        app:layout_constraintEnd_toEndOf="@id/tvEmi"/>
+
+    <ImageView
+        android:id="@+id/ivPayment"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/pay"
+        android:adjustViewBounds="true"
+        android:padding="@dimen/_5dp"
+        android:visibility="gone"
+        android:layout_marginEnd="@dimen/_5dp"
+        app:layout_constraintTop_toTopOf="@id/tvEmi"
+        app:layout_constraintBottom_toBottomOf="@id/tvEmiNumber"
+        app:layout_constraintStart_toEndOf="@id/tvEmi"
+        app:layout_constraintEnd_toStartOf="@id/ivPaymentPending"
+        android:contentDescription="@string/done"/>
+
+    <ImageView
+        android:id="@+id/ivPaymentPending"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/pending"
+        android:adjustViewBounds="true"
+        android:visibility="gone"
+        android:paddingVertical="@dimen/_10dp"
+        android:paddingHorizontal="@dimen/_5dp"
+        android:layout_marginEnd="@dimen/_12dp"
+        app:layout_constraintTop_toTopOf="@id/tvEmi"
+        app:layout_constraintBottom_toBottomOf="@id/tvEmiNumber"
+        app:layout_constraintStart_toEndOf="@id/ivPayment"
+        app:layout_constraintEnd_toStartOf="@id/ivPaymentDone"
+        android:contentDescription="@string/done"/>
+
+    <ImageView
+        android:id="@+id/ivPaymentDone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/payment_done"
+        android:adjustViewBounds="true"
+        android:visibility="gone"
+        android:padding="@dimen/_5dp"
+        android:layout_marginEnd="@dimen/_12dp"
+        app:layout_constraintTop_toTopOf="@id/tvEmi"
+        app:layout_constraintBottom_toBottomOf="@id/tvEmiNumber"
+        app:layout_constraintStart_toEndOf="@id/ivPaymentPending"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:contentDescription="@string/done"/>
+
+    <View
+        android:id="@+id/divider"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_1dp"
+        android:background="@color/divider_grey"
+        app:layout_constraintTop_toBottomOf="@id/tvEmiNumber"
+        app:layout_constraintBottom_toBottomOf="parent"/>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

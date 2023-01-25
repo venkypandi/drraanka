@@ -44,7 +44,7 @@
             android:layout_width="@dimen/_0dp"
             android:layout_height="wrap_content"
             style="@style/text_register_button_bold_23"
-            android:text="@string/my_plans"
+            android:text="@string/dash"
             android:layout_margin="@dimen/_12dp"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintBottom_toBottomOf="parent"

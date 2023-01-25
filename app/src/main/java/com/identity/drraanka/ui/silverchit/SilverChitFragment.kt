@@ -6,6 +6,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
+import androidx.navigation.fragment.findNavController
 import com.identity.drraanka.MainActivity
 import com.identity.drraanka.R
 import com.identity.drraanka.databinding.FragmentSilverChitBinding
@@ -47,5 +48,6 @@ class SilverChitFragment : Fragment() {
 
     private fun clickAction(data: String) {
         Toast.makeText(requireActivity(), data, Toast.LENGTH_SHORT).show()
+        findNavController().navigate(R.id.action_silverChitFragment_to_schemeDetailsFragment)
     }
 }

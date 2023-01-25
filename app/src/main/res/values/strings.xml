@@ -31,4 +31,8 @@
     <string name="pending">Pending :</string>
     <string name="selection">SELECTION</string>
     <string name="add_scheme">ADD_SCHEME</string>
+    <string name="scheme_details">Scheme Details</string>
+    <string name="done">Done</string>
+    <string name="contribution">Contribution</string>
+    <string name="rs">₹</string>
 </resources>

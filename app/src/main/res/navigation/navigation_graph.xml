@@ -30,5 +30,14 @@
         android:id="@+id/silverChitFragment"
         android:name="com.identity.drraanka.ui.silverchit.SilverChitFragment"
         android:label="fragment_silver_chit"
-        tools:layout="@layout/fragment_silver_chit" />
+        tools:layout="@layout/fragment_silver_chit" >
+        <action
+            android:id="@+id/action_silverChitFragment_to_schemeDetailsFragment"
+            app:destination="@id/schemeDetailsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/schemeDetailsFragment"
+        android:name="com.identity.drraanka.ui.schemedetails.SchemeDetailsFragment"
+        android:label="fragment_scheme_details"
+        tools:layout="@layout/fragment_scheme_details" />
 </navigation>
