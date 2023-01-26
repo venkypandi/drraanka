@@ -25,6 +25,9 @@ class SilverChitFragment : Fragment() {
         )
         binding = FragmentSilverChitBinding.inflate(inflater, container, false)
         setRecyclerViewAdapter()
+        binding.ivAddScheme.setOnClickListener {
+            findNavController().navigate(R.id.action_silverChitFragment_to_selectSchemeFragment)
+        }
         return binding.root
     }
 

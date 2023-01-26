@@ -35,4 +35,11 @@
     <string name="done">Done</string>
     <string name="contribution">Contribution</string>
     <string name="rs">₹</string>
+    <string name="minimum_contribution">Minimum Contribution</string>
+    <string name="scheme_tenure">Scheme Tenure</string>
+    <string name="instruction">(Product value is gained after 12months respectively)</string>
+    <string name="d_r_raanka_contribution">D.R.Raanka Contribution</string>
+    <string name="products_value">Products Value</string>
+    <string name="select_scheme">Select Scheme</string>
+    <string name="terms_and_conditions_apply">Terms and Conditions Apply</string>
 </resources>

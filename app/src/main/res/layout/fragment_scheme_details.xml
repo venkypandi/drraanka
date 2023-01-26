@@ -77,7 +77,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/rs"
-                android:paddingEnd="@dimen/_0dp"
+                android:paddingHorizontal="@dimen/_0dp"
                 style="@style/text_blue_bold_16"/>
 
             <TextView
@@ -134,7 +134,7 @@
         </androidx.constraintlayout.widget.ConstraintLayout>
 
         <TextView
-            android:id="@+id/tvSilverChitError"
+            android:id="@+id/tvError"
             android:layout_width="@dimen/_0dp"
             android:layout_height="@dimen/_0dp"
             style="@style/text_blue_regular_18"

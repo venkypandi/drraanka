@@ -34,10 +34,18 @@
         <action
             android:id="@+id/action_silverChitFragment_to_schemeDetailsFragment"
             app:destination="@id/schemeDetailsFragment" />
+        <action
+            android:id="@+id/action_silverChitFragment_to_selectSchemeFragment"
+            app:destination="@id/selectSchemeFragment" />
     </fragment>
     <fragment
         android:id="@+id/schemeDetailsFragment"
         android:name="com.identity.drraanka.ui.schemedetails.SchemeDetailsFragment"
         android:label="fragment_scheme_details"
         tools:layout="@layout/fragment_scheme_details" />
+    <fragment
+        android:id="@+id/selectSchemeFragment"
+        android:name="com.identity.drraanka.ui.selectscheme.SelectSchemeFragment"
+        android:label="fragment_select_scheme"
+        tools:layout="@layout/fragment_select_scheme" />
 </navigation>
