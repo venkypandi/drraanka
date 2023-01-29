@@ -15,6 +15,9 @@
             app:destination="@id/dashboardFragment"
             app:popUpTo="@id/loginFragment"
             app:popUpToInclusive="true" />
+        <action
+            android:id="@+id/action_loginFragment_to_registrationFragment"
+            app:destination="@id/registrationFragment" />
     </fragment>
     <fragment
         android:id="@+id/dashboardFragment"
@@ -48,4 +51,9 @@
         android:name="com.identity.drraanka.ui.selectscheme.SelectSchemeFragment"
         android:label="fragment_select_scheme"
         tools:layout="@layout/fragment_select_scheme" />
+    <fragment
+        android:id="@+id/registrationFragment"
+        android:name="com.identity.drraanka.ui.registration.RegistrationFragment"
+        android:label="fragment_registration"
+        tools:layout="@layout/fragment_registration" />
 </navigation>

@@ -11,7 +11,8 @@
     <color name="login_text_color">#090540</color>
     <color name="login_button_border_color">#707070</color>
     <color name="text_blue">#182050</color>
-    <color name="text_blue2">#00159e</color>
+    <color name="text_blue2">#3C377A</color>
+    <color name="text_blue3">#0B0745</color>
     <color name="divider_grey">#70707066</color>
     <color name="text_red">#FF0404</color>
 </resources>
