@@ -22,9 +22,9 @@
         android:title="@string/live_rates"/>
 
     <item
-        android:id="@+id/settingsFragment"
+        android:id="@+id/profileFragment"
         android:icon="@drawable/settings"
-        android:title="@string/settings"/>
+        android:title="@string/profile"/>
 
 
 </menu>

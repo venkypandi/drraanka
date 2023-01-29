@@ -54,4 +54,6 @@
     <string name="enter_your_aadhaar_number">Enter your Aadhaar Number</string>
     <string name="aadhar_number">Aadhar Number</string>
     <string name="create">Create</string>
+    <string name="profile">Profile</string>
+    <string name="update_profile">Update Profile</string>
 </resources>
