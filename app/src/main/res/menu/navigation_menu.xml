@@ -12,7 +12,7 @@
         android:title="@string/silver_chit"/>
 
     <item
-        android:id="@+id/productCatalogFragment"
+        android:id="@+id/categoriesFragment"
         android:icon="@drawable/product_catalog_btm"
         android:title="@string/product_catalog"/>
 

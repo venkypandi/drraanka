@@ -56,4 +56,5 @@
     <string name="create">Create</string>
     <string name="profile">Profile</string>
     <string name="update_profile">Update Profile</string>
+    <string name="categories">Categories</string>
 </resources>
