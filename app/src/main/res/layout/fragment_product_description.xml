@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@drawable/login_bg"
+    tools:context=".ui.productdescription.ProductDescriptionFragment">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:src="@drawable/login_bg_img"
+        android:scaleType="fitXY"
+        android:contentDescription="@string/login_background" />
+
+   <ScrollView
+       android:id="@+id/scrollViewProducts"
+       android:layout_width="@dimen/_0dp"
+       android:layout_height="@dimen/_0dp"
+       app:layout_constraintTop_toTopOf="parent"
+       app:layout_constraintBottom_toBottomOf="parent"
+       app:layout_constraintStart_toStartOf="parent"
+       app:layout_constraintEnd_toEndOf="parent">
+
+       <androidx.constraintlayout.widget.ConstraintLayout
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content">
+
+           <com.google.android.material.card.MaterialCardView
+               android:id="@+id/mcViewProductImg"
+               android:layout_width="@dimen/_0dp"
+               android:layout_height="wrap_content"
+               app:cardCornerRadius="@dimen/_8dp"
+               app:cardBackgroundColor="@color/white"
+               app:cardElevation="@dimen/_8dp"
+               android:layout_margin="@dimen/_13dp"
+               app:layout_constraintTop_toTopOf="parent"
+               app:layout_constraintBottom_toTopOf="@id/recyclerViewProducts"
+               app:layout_constraintStart_toStartOf="parent"
+               app:layout_constraintEnd_toEndOf="parent">
+
+               <ImageView
+                   android:id="@+id/ivProductImg"
+                   android:layout_width="match_parent"
+                   android:layout_height="wrap_content"
+                   android:src="@drawable/item1"
+                   android:adjustViewBounds="true"
+                   android:contentDescription="@string/products"/>
+
+           </com.google.android.material.card.MaterialCardView>
+
+           <androidx.recyclerview.widget.RecyclerView
+               android:id="@+id/recyclerViewProducts"
+               android:layout_width="@dimen/_0dp"
+               android:layout_height="wrap_content"
+               android:orientation="horizontal"
+               tools:listitem="@layout/layout_product_item"
+               android:layout_marginStart="-8dp"
+               app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+               app:layout_constraintTop_toBottomOf="@id/mcViewProductImg"
+               app:layout_constraintBottom_toTopOf="@id/tvProductName"
+               app:layout_constraintStart_toStartOf="@id/mcViewProductImg"
+               app:layout_constraintEnd_toEndOf="@id/mcViewProductImg"/>
+
+           <TextView
+               android:id="@+id/tvProductName"
+               android:layout_width="@dimen/_0dp"
+               android:layout_height="wrap_content"
+               style="@style/text_white_bold_16"
+               android:text="@string/dash"
+               android:layout_marginVertical="@dimen/_8dp"
+               app:layout_constraintTop_toBottomOf="@id/recyclerViewProducts"
+               app:layout_constraintBottom_toTopOf="@id/tvProductDescription"
+               app:layout_constraintStart_toStartOf="@id/mcViewProductImg"
+               app:layout_constraintEnd_toEndOf="@id/mcViewProductImg"/>
+
+           <TextView
+               android:id="@+id/tvProductDescription"
+               android:layout_width="@dimen/_0dp"
+               android:layout_height="wrap_content"
+               style="@style/text_white_regular_9"
+               android:lineSpacingExtra="@dimen/_12sp"
+               android:text="@string/dash"
+               app:layout_constraintTop_toBottomOf="@id/tvProductName"
+               app:layout_constraintBottom_toTopOf="@id/btnEnquiry"
+               app:layout_constraintStart_toStartOf="@id/mcViewProductImg"
+               app:layout_constraintEnd_toEndOf="@id/mcViewProductImg"/>
+
+           <Button
+               android:id="@+id/btnEnquiry"
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:layout_marginTop="@dimen/_8dp"
+               android:layout_marginBottom="@dimen/_15dp"
+               android:layout_marginEnd="@dimen/_5dp"
+               app:backgroundTint="@null"
+               android:text="@string/enquiry"
+               style="@style/text_enquiry_button_bold_12"
+               android:background="@drawable/layout_sharp_button"
+               app:layout_constraintEnd_toEndOf="@id/mcViewProductImg"
+               app:layout_constraintTop_toBottomOf="@id/tvProductDescription"
+               app:layout_constraintBottom_toBottomOf="parent"/>
+
+           <TextView
+               android:id="@+id/tvProductImgError"
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               style="@style/text_blue_regular_18"
+               android:gravity="center"
+               android:visibility="visible"
+               android:layout_margin="@dimen/_13dp"
+               android:padding="@dimen/_20dp"
+               android:background="@drawable/curved_layout_white"
+               app:layout_constraintStart_toStartOf="parent"
+               app:layout_constraintEnd_toEndOf="parent"
+               app:layout_constraintTop_toTopOf="@id/recyclerViewProducts"
+               app:layout_constraintBottom_toBottomOf="@id/recyclerViewProducts"/>
+
+       </androidx.constraintlayout.widget.ConstraintLayout>
+
+   </ScrollView>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/clProgressBar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        android:padding="@dimen/_20dp"
+        android:background="@drawable/curved_layout_white"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <ProgressBar
+            android:id="@+id/progress_bar_footer"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:indeterminateTint="@color/text_blue2"
+            app:layout_constraintStart_toStartOf="parent"
+            style="?android:attr/progressBarStyleLarge"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"/>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <TextView
+        android:id="@+id/tvError"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        style="@style/text_blue_regular_18"
+        android:gravity="center"
+        android:visibility="gone"
+        android:layout_margin="@dimen/_13dp"
+        android:padding="@dimen/_20dp"
+        android:background="@drawable/curved_layout_white"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

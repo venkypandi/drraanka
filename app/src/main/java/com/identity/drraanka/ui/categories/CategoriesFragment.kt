@@ -5,6 +5,7 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.navigation.fragment.findNavController
 import com.identity.drraanka.MainActivity
 import com.identity.drraanka.R
 import com.identity.drraanka.databinding.FragmentCategoriesBinding
@@ -73,6 +74,6 @@ class CategoriesFragment : Fragment() {
     }
 
     private fun listItemClicked() {
-
+        findNavController().navigate(R.id.action_categoriesFragment_to_productDescriptionFragment)
     }
 }
