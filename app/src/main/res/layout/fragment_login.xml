@@ -35,10 +35,20 @@
                android:layout_marginTop="40dp"
                android:layout_marginBottom="@dimen/_50dp"
                app:layout_constraintTop_toTopOf="parent"
-               app:layout_constraintBottom_toTopOf="@id/tvWelcomeBack"
+               app:layout_constraintBottom_toTopOf="@id/ivGoldCoin"
                app:layout_constraintStart_toStartOf="parent"
                app:layout_constraintEnd_toEndOf="parent"
                android:contentDescription="@string/header_logo"/>
+
+           <ImageView
+               android:id="@+id/ivGoldCoin"
+               app:layout_constraintStart_toStartOf="parent"
+               app:layout_constraintEnd_toEndOf="parent"
+               android:src="@drawable/coin_bg"
+               app:layout_constraintBottom_toTopOf="@id/tvWelcomeBack"
+               app:layout_constraintTop_toBottomOf="@id/ivHeaderLogo"
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"/>
 
            <TextView
                android:id="@+id/tvWelcomeBack"
@@ -49,7 +59,7 @@
                android:layout_marginTop="@dimen/_50dp"
                android:layout_marginBottom="@dimen/_2dp"
                android:layout_marginHorizontal="@dimen/_25dp"
-               app:layout_constraintTop_toBottomOf="@id/ivHeaderLogo"
+               app:layout_constraintTop_toBottomOf="@id/ivGoldCoin"
                app:layout_constraintBottom_toTopOf="@id/tvLoginDescription"
                app:layout_constraintStart_toStartOf="parent"
                app:layout_constraintEnd_toEndOf="parent"/>
@@ -89,12 +99,30 @@
                android:hint="@string/password"
                android:inputType="textPassword"
                android:importantForAutofill="no"
+               android:drawableEnd="@drawable/ic_baseline_remove_red_eye_24"
                android:layout_marginTop="@dimen/_10dp"
                android:layout_marginBottom="@dimen/_20dp"
                app:layout_constraintTop_toBottomOf="@id/etMobileNumber"
+               app:layout_constraintBottom_toTopOf="@id/etOtp"
+               app:layout_constraintStart_toStartOf="@id/tvWelcomeBack"
+               app:layout_constraintEnd_toEndOf="@id/tvWelcomeBack" />
+
+           <EditText
+               android:id="@+id/etOtp"
+               android:layout_width="@dimen/_0dp"
+               android:layout_height="wrap_content"
+               style="@style/edit_text_login_bold_17"
+               android:hint="Enter OTP"
+               android:inputType="number"
+               android:visibility="gone"
+               android:importantForAutofill="no"
+               android:layout_marginTop="@dimen/_10dp"
+               android:layout_marginBottom="@dimen/_20dp"
+               app:layout_constraintTop_toBottomOf="@id/etPassword"
                app:layout_constraintBottom_toTopOf="@id/btnLogin"
                app:layout_constraintStart_toStartOf="@id/tvWelcomeBack"
                app:layout_constraintEnd_toEndOf="@id/tvWelcomeBack" />
+
 
            <Button
                android:id="@+id/btnLogin"
@@ -105,7 +133,7 @@
                style="@style/text_login_button_bold_20"
                android:layout_marginTop="@dimen/_20dp"
                android:layout_marginBottom="@dimen/_10dp"
-               app:layout_constraintTop_toBottomOf="@id/etPassword"
+               app:layout_constraintTop_toBottomOf="@id/etOtp"
                app:layout_constraintBottom_toTopOf="@id/btnRegisterNow"
                app:layout_constraintStart_toStartOf="@id/tvWelcomeBack"
                app:layout_constraintEnd_toEndOf="@id/tvWelcomeBack"/>
@@ -124,6 +152,14 @@
                app:layout_constraintBottom_toBottomOf="parent"
                app:layout_constraintStart_toStartOf="@id/tvWelcomeBack"
                app:layout_constraintEnd_toEndOf="@id/tvWelcomeBack"/>
+
+           <ImageView
+               app:layout_constraintEnd_toEndOf="parent"
+               app:layout_constraintBottom_toBottomOf="@id/btnRegisterNow"
+               android:src="@drawable/silvercoin"
+               app:layout_constraintTop_toTopOf="@id/btnRegisterNow"
+               android:layout_width="@dimen/_100dp"
+               android:layout_height="@dimen/_100dp"/>
 
        </androidx.constraintlayout.widget.ConstraintLayout>
 

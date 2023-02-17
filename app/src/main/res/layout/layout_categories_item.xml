@@ -11,12 +11,13 @@
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="wrap_content"
+        android:layout_gravity="center"
         android:layout_height="wrap_content">
 
         <ImageView
             android:id="@+id/ivCategory"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="@dimen/_200dp"
+            android:layout_height="@dimen/_200dp"
             android:adjustViewBounds="true"
             android:src="@drawable/item1"
             app:layout_constraintTop_toTopOf="parent"
@@ -27,17 +28,16 @@
 
         <TextView
             android:id="@+id/tvCategory"
-            android:layout_width="match_parent"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            style="@style/text_blue2_regular_10"
             android:lines="2"
             android:minLines="2"
             android:maxLines="2"
             android:singleLine="false"
             android:gravity="center"
-            android:text="@string/dash"
-            android:layout_marginHorizontal="@dimen/_12dp"
+            android:text="nfnnfjngdfgdfjbgdfbg"
             android:layout_marginBottom="@dimen/_5dp"
+
             app:layout_constraintBottom_toBottomOf="@id/ivCategory"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent"/>

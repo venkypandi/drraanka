@@ -4,19 +4,20 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
+import com.identity.drraanka.data.remote.model.CustomerChitDetails
 import com.identity.drraanka.databinding.LayoutSchemeDetailsItemBinding
 
-class SchemeDetailsAdapter(private val clickListener: (String) -> Unit) :
+class SchemeDetailsAdapter(private val clickListener: (CustomerChitDetails?) -> Unit) :
     RecyclerView.Adapter<SchemeDetailsAdapter.SchemeDetailsViewHolder>() {
 
-    private val dataList = ArrayList<String>()
+    private val dataList = ArrayList<CustomerChitDetails?>()
 
     inner class SchemeDetailsViewHolder(private val binding: LayoutSchemeDetailsItemBinding) :
         RecyclerView.ViewHolder(binding.root) {
-        fun bind(data: String, clickListener: (String) -> Unit, position: Int) {
-            binding.tvEmi.text = data
-            binding.tvEmiDate.text = data
-            binding.tvEmiNumber.text = data
+        fun bind(data: CustomerChitDetails?, clickListener: (CustomerChitDetails?) -> Unit, position: Int) {
+            binding.tvEmi.text = data?.chitEmi
+//            binding.tvEmiDate.text = data?.chitMonth.toString()
+            binding.tvEmiNumber.text = data?.date
             if (position%2 ==0) {
                 binding.ivPaymentDone.visibility = View.VISIBLE
                 binding.ivPaymentPending.visibility = View.GONE
@@ -41,7 +42,7 @@ class SchemeDetailsAdapter(private val clickListener: (String) -> Unit) :
         holder.bind(dataList[position], clickListener, position)
     }
 
-    fun setDataList(data: List<String>) {
+    fun setDataList(data: List<CustomerChitDetails?>) {
         dataList.clear()
         dataList.addAll(data)
     }

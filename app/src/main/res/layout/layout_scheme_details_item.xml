@@ -19,30 +19,30 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toStartOf="@id/ivPayment"/>
 
-    <TextView
-        android:id="@+id/tvEmiDate"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/dash"
-        style="@style/text_blue_regular_12"
-        android:layout_marginTop="@dimen/_1dp"
-        app:layout_constraintTop_toTopOf="@id/tvEmiNumber"
-        app:layout_constraintBottom_toBottomOf="@id/tvEmiNumber"
-        app:layout_constraintStart_toStartOf="@id/tvEmi"
-        app:layout_constraintEnd_toStartOf="@id/tvHyphen"/>
+<!--    <TextView-->
+<!--        android:id="@+id/tvEmiDate"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:text="@string/dash"-->
+<!--        style="@style/text_blue_regular_12"-->
+<!--        android:layout_marginTop="@dimen/_1dp"-->
+<!--        app:layout_constraintTop_toTopOf="@id/tvEmiNumber"-->
+<!--        app:layout_constraintBottom_toBottomOf="@id/tvEmiNumber"-->
+<!--        app:layout_constraintStart_toStartOf="@id/tvEmi"-->
+<!--        app:layout_constraintEnd_toStartOf="@id/tvHyphen"/>-->
 
-    <TextView
-        android:id="@+id/tvHyphen"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/dash"
-        style="@style/text_blue_regular_12"
-        android:paddingHorizontal="@dimen/_0dp"
-        android:layout_marginTop="@dimen/_1dp"
-        app:layout_constraintTop_toTopOf="@id/tvEmiNumber"
-        app:layout_constraintBottom_toBottomOf="@id/tvEmiNumber"
-        app:layout_constraintStart_toEndOf="@id/tvEmiDate"
-        app:layout_constraintEnd_toStartOf="@id/tvEmiNumber"/>
+<!--    <TextView-->
+<!--        android:id="@+id/tvHyphen"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:text="@string/dash"-->
+<!--        style="@style/text_blue_regular_12"-->
+<!--        android:paddingHorizontal="@dimen/_0dp"-->
+<!--        android:layout_marginTop="@dimen/_1dp"-->
+<!--        app:layout_constraintTop_toTopOf="@id/tvEmiNumber"-->
+<!--        app:layout_constraintBottom_toBottomOf="@id/tvEmiNumber"-->
+<!--        app:layout_constraintStart_toEndOf="@id/tvEmiDate"-->
+<!--        app:layout_constraintEnd_toStartOf="@id/tvEmiNumber"/>-->
 
     <TextView
         android:id="@+id/tvEmiNumber"
@@ -54,7 +54,7 @@
         android:layout_marginBottom="@dimen/_10dp"
         app:layout_constraintTop_toBottomOf="@id/tvEmi"
         app:layout_constraintBottom_toTopOf="@id/divider"
-        app:layout_constraintStart_toEndOf="@id/tvHyphen"
+        app:layout_constraintStart_toStartOf="@id/tvEmi"
         app:layout_constraintEnd_toEndOf="@id/tvEmi"/>
 
     <ImageView

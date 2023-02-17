@@ -2,6 +2,7 @@ package com.identity.drraanka.di
 
 import android.content.Context
 import com.identity.drraanka.DrRaankaApplication
+import com.identity.drraanka.data.remote.api.RaankaApiService
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn
@@ -24,7 +25,13 @@ object AppModule {
     fun provideRetrofit(): Retrofit {
         return Retrofit.Builder()
             .addConverterFactory(GsonConverterFactory.create())
-            .baseUrl("")
+            .baseUrl("http://164.52.205.22/ranka_api_dev/")
             .build()
+    }
+
+    @Provides
+    @Singleton
+    fun provideApiService(retrofit: Retrofit): RaankaApiService {
+        return retrofit.create(RaankaApiService::class.java)
     }
 }

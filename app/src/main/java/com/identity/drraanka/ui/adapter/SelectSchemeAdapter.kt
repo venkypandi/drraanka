@@ -5,21 +5,22 @@ import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.identity.drraanka.R
+import com.identity.drraanka.data.remote.model.Scheme
 import com.identity.drraanka.databinding.LayoutSelectSchemeItemBinding
 
-class SelectSchemeAdapter(private val context: Context, private val clickListener: (String) -> Unit) :
+class SelectSchemeAdapter(private val context: Context, private val clickListener: (Scheme?) -> Unit) :
     RecyclerView.Adapter<SelectSchemeAdapter.SelectSchemeViewHolder>() {
 
-    private val dataList = ArrayList<String>()
+    private val dataList = ArrayList<Scheme?>()
 
     class SelectSchemeViewHolder(private val binding: LayoutSelectSchemeItemBinding) :
         RecyclerView.ViewHolder(binding.root) {
-        fun bind(data: String, clickListener: (String) -> Unit, context: Context) {
-            binding.tvSchemeName.text = data
-            binding.tvMinContributionAmount.text = context.getString(R.string.rs)+" 1000.00"
-            binding.tvSchemeTenureMonths.text = "6 Months"
-            binding.tvRaankaContributionAmount.text = context.getString(R.string.rs)+" 1000.00"
-            binding.tvProductValueAmount.text = context.getString(R.string.rs)+" 10000.00"
+        fun bind(data: Scheme?, clickListener: (Scheme?) -> Unit, context: Context) {
+            binding.tvSchemeName.text = data?.schemeName
+            binding.tvMinContributionAmount.text = data?.minimumContribution
+            binding.tvSchemeTenureMonths.text = data?.tenture
+            binding.tvRaankaContributionAmount.text = data?.raankaContribution
+            binding.tvProductValueAmount.text = data?.productValue
 
             binding.ivAddScheme.setOnClickListener {
                 clickListener(data)
@@ -39,7 +40,7 @@ class SelectSchemeAdapter(private val context: Context, private val clickListene
         holder.bind(dataList[position], clickListener, context)
     }
 
-    fun setDataList(data: List<String>) {
+    fun setDataList(data: List<Scheme?>) {
         dataList.clear()
         dataList.addAll(data)
     }

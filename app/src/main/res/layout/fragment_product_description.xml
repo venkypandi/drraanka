@@ -43,9 +43,7 @@
                <ImageView
                    android:id="@+id/ivProductImg"
                    android:layout_width="match_parent"
-                   android:layout_height="wrap_content"
-                   android:src="@drawable/item1"
-                   android:adjustViewBounds="true"
+                   android:layout_height="300dp"
                    android:contentDescription="@string/products"/>
 
            </com.google.android.material.card.MaterialCardView>

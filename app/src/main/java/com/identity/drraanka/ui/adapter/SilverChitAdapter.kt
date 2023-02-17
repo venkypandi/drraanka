@@ -3,19 +3,20 @@ package com.identity.drraanka.ui.adapter
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
+import com.identity.drraanka.data.remote.model.CustomerChit
 import com.identity.drraanka.databinding.LayoutSilverChitItemBinding
 
-class SilverChitAdapter(private val clickListener: (String) -> Unit) :
+class SilverChitAdapter(private val clickListener: (CustomerChit?) -> Unit) :
     RecyclerView.Adapter<SilverChitAdapter.SilverChitViewHolder>() {
 
-    private val dataList = ArrayList<String>()
+    private val dataList = ArrayList<CustomerChit?>()
 
     inner class SilverChitViewHolder(private val binding: LayoutSilverChitItemBinding) :
         RecyclerView.ViewHolder(binding.root) {
-            fun bind(dataText: String, clickListener: (String) -> Unit) {
-                binding.tvSchemeName.text = dataText
-                binding.tvSchemeDateValue.text = "22-01-2023"
-                binding.tvSchemePendingValue.text = "2 Months"
+            fun bind(dataText: CustomerChit?, clickListener: (CustomerChit?) -> Unit) {
+                binding.tvSchemeName.text = dataText?.chitName
+                binding.tvSchemeDateValue.text = dataText?.chitStartDate
+                binding.tvSchemePendingValue.text = dataText?.pending
                 binding.mcViewSilverChit.setOnClickListener {
                     clickListener(dataText)
                 }
@@ -33,7 +34,7 @@ class SilverChitAdapter(private val clickListener: (String) -> Unit) :
         holder.bind(dataList[position], clickListener)
     }
 
-    fun setDataList(data: List<String>) {
+    fun setDataList(data: List<CustomerChit?>) {
         dataList.clear()
         dataList.addAll(data)
     }

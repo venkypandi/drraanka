@@ -6,11 +6,13 @@ import android.os.Bundle
 import android.view.View
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.splashscreen.SplashScreen.Companion.installSplashScreen
+import androidx.navigation.NavDirections
 import androidx.navigation.fragment.NavHostFragment
 import androidx.navigation.ui.NavigationUI
 import com.identity.drraanka.databinding.ActivityMainBinding
 import com.identity.drraanka.utils.ConnectivityCheck
 import dagger.hilt.android.AndroidEntryPoint
+import kotlin.math.log
 
 @AndroidEntryPoint
 class MainActivity : AppCompatActivity() {
@@ -57,10 +59,18 @@ class MainActivity : AppCompatActivity() {
         binding.btmNavigationDashboard.visibility = View.GONE
     }
 
-    fun setUpActionBar(title: String, backPressedListener: () -> Unit) {
+    fun setUpActionBar(title: String, backPressedListener: () -> Unit, directionListener: () ->Unit,
+                        logoutListener: () -> Unit) {
         binding.tvHeadingText.text = title
         binding.ivBack.setOnClickListener { backPressedListener() }
         binding.clActionBar.visibility = View.VISIBLE
+        binding.ivProfileIcon.setOnClickListener {
+            directionListener()
+        }
+
+        binding.ivLogOut.setOnClickListener {
+            logoutListener()
+        }
     }
 
     fun hideActionBar() {

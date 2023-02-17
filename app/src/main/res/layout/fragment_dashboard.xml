@@ -35,11 +35,9 @@
             app:tint="@color/white"
             android:padding="@dimen/_5dp"
             android:layout_marginHorizontal="17dp"
-            app:layout_constraintHorizontal_chainStyle="spread_inside"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintEnd_toStartOf="@id/ivProfileIcon"
             android:contentDescription="@string/header_logo" />
 
         <ImageView
@@ -52,9 +50,21 @@
             android:layout_marginEnd="@dimen/_13dp"
             app:layout_constraintTop_toTopOf="@id/ivLogo"
             app:layout_constraintBottom_toBottomOf="@id/ivLogo"
-            app:layout_constraintStart_toEndOf="@id/ivLogo"
-            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/ivLogOut"
             android:contentDescription="@string/profile_icon" />
+
+        <ImageView
+            android:id="@+id/ivLogOut"
+            android:layout_width="50dp"
+            android:layout_height="@dimen/_50dp"
+            android:padding="@dimen/_5dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/ic_baseline_logout_24"
+            android:layout_marginEnd="@dimen/_13dp"
+            app:layout_constraintTop_toTopOf="@id/ivProfileIcon"
+            app:layout_constraintBottom_toBottomOf="@id/ivProfileIcon"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:contentDescription="Log Out Button" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 

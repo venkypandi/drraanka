@@ -5,30 +5,29 @@ import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.core.content.ContextCompat
 import androidx.recyclerview.widget.RecyclerView
+import com.bumptech.glide.Glide
 import com.identity.drraanka.R
+import com.identity.drraanka.data.remote.model.Attachment
 import com.identity.drraanka.databinding.LayoutProductItemBinding
 
 
 class ProductImageAdapter(
     private val context: Context,
-    private val clickListener: (Int) -> Unit
+    private val clickListener: (Attachment?) -> Unit
 ) : RecyclerView.Adapter<ProductImageAdapter.ProductImageViewHolder>() {
 
-    private val dataList = ArrayList<Int>()
+    private val dataList = ArrayList<Attachment?>()
 
     inner class ProductImageViewHolder(private val binding: LayoutProductItemBinding) :
         RecyclerView.ViewHolder(binding.root) {
-        fun bind(data: Int, clickListener: (Int) -> Unit, context: Context) {
-            if (position % 2 == 0) {
-                binding.ivProduct.setImageDrawable(ContextCompat.getDrawable(context, R.drawable.item1))
-                binding.mcViewProduct.setOnClickListener {
-                    clickListener(R.drawable.item1)
-                }
-            } else {
-                binding.ivProduct.setImageDrawable(ContextCompat.getDrawable(context, R.drawable.item2))
-                binding.mcViewProduct.setOnClickListener {
-                    clickListener(R.drawable.item2)
-                }
+        fun bind(data: Attachment?, clickListener: (Attachment?) -> Unit, context: Context) {
+            Glide.with(context)
+                .load(data?.image)
+                .error(R.drawable.alert)
+                .into(binding.ivProduct)
+
+            binding.mcViewProduct.setOnClickListener {
+                clickListener(data)
             }
         }
 
@@ -45,7 +44,7 @@ class ProductImageAdapter(
         holder.bind(dataList[position], clickListener, context)
     }
 
-    fun setDataList(data: List<Int>) {
+    fun setDataList(data: List<Attachment?>) {
         dataList.clear()
         dataList.addAll(data)
     }

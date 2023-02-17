@@ -28,6 +28,21 @@
             android:id="@+id/action_dashboardFragment_to_silverChitFragment"
             app:destination="@id/silverChitFragment"
             app:popUpTo="@id/dashboardFragment" />
+        <argument
+            android:name="sessionId"
+            app:argType="string"
+            app:nullable="true" />
+        <action
+            android:id="@+id/action_dashboardFragment_to_categoriesFragment"
+            app:destination="@id/categoriesFragment" />
+        <action
+            android:id="@+id/action_dashboardFragment_to_profileFragment"
+            app:destination="@id/profileFragment" />
+        <action
+            android:id="@+id/action_dashboardFragment_to_loginFragment"
+            app:destination="@id/loginFragment"
+            app:popUpTo="@id/dashboardFragment"
+            app:popUpToInclusive="true" />
     </fragment>
     <fragment
         android:id="@+id/silverChitFragment"
@@ -40,17 +55,79 @@
         <action
             android:id="@+id/action_silverChitFragment_to_selectSchemeFragment"
             app:destination="@id/selectSchemeFragment" />
+        <argument
+            android:name="sessionId"
+            app:argType="string"
+            app:nullable="true" />
+        <action
+            android:id="@+id/action_silverChitFragment_to_profileFragment"
+            app:destination="@id/profileFragment" />
+        <action
+            android:id="@+id/action_silverChitFragment_to_loginFragment"
+            app:destination="@id/loginFragment"
+            app:popUpTo="@id/dashboardFragment"
+            app:popUpToInclusive="true" />
     </fragment>
     <fragment
         android:id="@+id/schemeDetailsFragment"
         android:name="com.identity.drraanka.ui.schemedetails.SchemeDetailsFragment"
         android:label="fragment_scheme_details"
-        tools:layout="@layout/fragment_scheme_details" />
+        tools:layout="@layout/fragment_scheme_details" >
+        <argument
+            android:name="sessionId"
+            app:argType="string"
+            app:nullable="true" />
+        <argument
+            android:name="branchId"
+            app:argType="string"
+            app:nullable="true" />
+        <argument
+            android:name="chitCode"
+            app:argType="string"
+            app:nullable="true" />
+        <argument
+            android:name="tenure"
+            app:argType="string"
+            app:nullable="true" />
+        <action
+            android:id="@+id/action_schemeDetailsFragment_to_profileFragment"
+            app:destination="@id/profileFragment" />
+        <argument
+            android:name="schemeName"
+            app:argType="string"
+            app:nullable="true" />
+        <argument
+            android:name="contribution"
+            app:argType="string"
+            app:nullable="true" />
+        <argument
+            android:name="startDate"
+            app:argType="string"
+            app:nullable="true" />
+        <action
+            android:id="@+id/action_schemeDetailsFragment_to_loginFragment"
+            app:destination="@id/loginFragment"
+            app:popUpTo="@id/dashboardFragment"
+            app:popUpToInclusive="true" />
+    </fragment>
     <fragment
         android:id="@+id/selectSchemeFragment"
         android:name="com.identity.drraanka.ui.selectscheme.SelectSchemeFragment"
         android:label="fragment_select_scheme"
-        tools:layout="@layout/fragment_select_scheme" />
+        tools:layout="@layout/fragment_select_scheme" >
+        <argument
+            android:name="sessionId"
+            app:argType="string"
+            app:nullable="true" />
+        <action
+            android:id="@+id/action_selectSchemeFragment_to_profileFragment"
+            app:destination="@id/profileFragment" />
+        <action
+            android:id="@+id/action_selectSchemeFragment_to_loginFragment"
+            app:destination="@id/loginFragment"
+            app:popUpTo="@id/dashboardFragment"
+            app:popUpToInclusive="true" />
+    </fragment>
     <fragment
         android:id="@+id/registrationFragment"
         android:name="com.identity.drraanka.ui.registration.RegistrationFragment"
@@ -60,7 +137,13 @@
         android:id="@+id/profileFragment"
         android:name="com.identity.drraanka.ui.profile.ProfileFragment"
         android:label="fragment_profile"
-        tools:layout="@layout/fragment_profile" />
+        tools:layout="@layout/fragment_profile" >
+        <action
+            android:id="@+id/action_profileFragment_to_loginFragment"
+            app:destination="@id/loginFragment"
+            app:popUpTo="@id/dashboardFragment"
+            app:popUpToInclusive="true" />
+    </fragment>
     <fragment
         android:id="@+id/categoriesFragment"
         android:name="com.identity.drraanka.ui.categories.CategoriesFragment"
@@ -69,10 +152,31 @@
         <action
             android:id="@+id/action_categoriesFragment_to_productDescriptionFragment"
             app:destination="@id/productDescriptionFragment" />
+        <action
+            android:id="@+id/action_categoriesFragment_to_profileFragment"
+            app:destination="@id/profileFragment" />
+        <action
+            android:id="@+id/action_categoriesFragment_to_loginFragment"
+            app:destination="@id/loginFragment"
+            app:popUpTo="@id/dashboardFragment"
+            app:popUpToInclusive="true" />
     </fragment>
     <fragment
         android:id="@+id/productDescriptionFragment"
         android:name="com.identity.drraanka.ui.productdescription.ProductDescriptionFragment"
         android:label="fragment_product_description"
-        tools:layout="@layout/fragment_product_description" />
+        tools:layout="@layout/fragment_product_description" >
+        <argument
+            android:name="product"
+            app:argType="com.identity.drraanka.data.remote.model.Product"
+            app:nullable="true" />
+        <action
+            android:id="@+id/action_productDescriptionFragment_to_profileFragment"
+            app:destination="@id/profileFragment" />
+        <action
+            android:id="@+id/action_productDescriptionFragment_to_loginFragment"
+            app:destination="@id/loginFragment"
+            app:popUpTo="@id/dashboardFragment"
+            app:popUpToInclusive="true" />
+    </fragment>
 </navigation>
